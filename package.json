@@ -2,9 +2,11 @@
   "name": "node-bankid",
   "version": "0.1.1",
   "description": "A backend Node module for calling the BankID API.",
-  "main": "index.js",
+  "main": "./lib",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./lib",
+    "lint": "eslint ./gulpfile.js ./lib/**/*.js ./test/**/*.js",
+    "test": "mocha ./test/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,19 @@
     "url": "https://github.com/Wopify/node-bankid/issues"
   },
   "homepage": "https://github.com/Wopify/node-bankid#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.5.0",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^3.0.1",
+    "mocha": "^3.0.2",
+    "proxyquire": "^1.7.10",
+    "sinon": "^1.17.5",
+    "sinon-as-promised": "^4.0.2",
+    "sinon-chai": "^2.8.0"
+  }
 }
